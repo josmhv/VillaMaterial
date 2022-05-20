@@ -1,0 +1,2 @@
+module AddingProductsHelper
+end
