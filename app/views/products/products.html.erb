@@ -1,24 +1,15 @@
 <h1 class="display-4">Productos</h1>
-
 <div id="add_products" class="row">
-    <% @adding_products.each do |add_product| %>
-        
-        <div class="card col-sm6" style="width: 18rem; margin: 20px;">
-            <%= image_tag "products/#{add_product.image}", alt: "image of #{add_product.name}", class: "card-img-top" %>
-            <div class="card-body">
-                <h1 class="card-title display-5"> <%= add_product.name %> </h5>
-                <p class="card-text"> <%= add_product.description %> </p>
-            </div>
-            <div class="card-body">
-                <%# link_to "Añadir al carrito", products_products_path, class: "btn btn-outline-primary" %>
-                <%= button_to "Añadir al carrito", products_addToCart_path, class: "btn btn-outline-primary" %>
-            </div>
-        </div>
-        
-        <% @i.to_i
-           @i += 1 %>
-        
-           
-           <% end %>
-           <%= @global %>
+  <% @adding_products.each do |product| %>
+    <div class="card col-sm6" style="width: 18rem; margin: 20px;">
+      <%= image_tag "products/#{product.image}", alt: "image of #{product.name}", class: "card-img-top" %>
+      <div class="card-body">
+        <h1 class="card-title display-5"> <%= product.name %> </h5>
+        <p class="card-text"> <%= product.description %> </p>
+      </div>
+      <div class="card-body">
+        <%= button_to "Añadir al carrito", products_addToCart_path(:productId => product.id), class: "btn btn-outline-primary" %>
+      </div>
+    </div>
+  <% end %>
 </div>

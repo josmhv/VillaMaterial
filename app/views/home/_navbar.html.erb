@@ -3,30 +3,38 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
+      <li class="nav-item">
         <%= link_to "Productos", products_products_path, class: "nav-link btn btn-dark" %>
-    </li>
-    <li class="nav-item">
+      </li>
+      <li class="nav-item">
         <%= link_to "Añadir Productos", adding_products_path, class: "nav-link btn btn-dark" %>
-    </li>
-</ul>
-<ul class="navbar-nav justify-content-end">
-    
-    <li class="navi-tem">
+      </li>
+    </ul>
+    <ul class="navbar-nav justify-content-end">
+      <li class="navi-tem">
         <%= link_to "Contactos", home_contacts_path, class: "btn btn-dark" %>
-    </li>
-    <li class="nav-tem">
-        <a class="btn btn-dark">Carrito</a>
-    </li>
-    <li class="nav-item">
-        <a class="btn btn-dark" href="#">Sign In</a>
-    </li>
-    <li class="nav-item">
-        <a class="btn btn-dark" href="#">Log In</a>
-    </li>
-</ul>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Carrito", carts_show_path, class: "btn btn-dark" %>
+      </li>
+      <div class="dropleft btn-group mr-1" >
+        <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+          <%= image_tag "home/userLogo.png", class: "img-fluid", style: "width: 23px" %>
+        </a>
+        <% if user_signed_in? %>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="margin-right: 20px">
+            <%= button_to "Cerrar Sesion", destroy_user_session_path, method: :delete, class: "btn btn-dark dropdown-item" %>
+            <%= link_to "Editar perfil", edit_user_registration_path, class: "btn btn-dark dropdown-item" %>
+          </div>
+        <% else %>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
+            <%= link_to "Registrarse", new_user_registration_path, class: "btn btn-dark dropdown-item" %>
+            <%= link_to "Iniciar sesión", new_user_session_path, class: "btn btn-dark dropdown-item" %>
+          </div>
+        <% end %>
+      </div>
+    </ul>
   </div>
 </nav>

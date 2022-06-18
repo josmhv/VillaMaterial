@@ -38,3 +38,4 @@ end
 
 gem "wdm", ">= 0.1.0" if Gem.win_platform?
 gem "devise", "~> 4.8", ">= 4.8.1"
+gem "sassc-rails"
