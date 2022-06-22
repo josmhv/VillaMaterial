@@ -14,11 +14,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
-
   def create_cart
     if user_signed_in?
       @cart = AddingProduct.find(session[:cart])
     end
   end
-
 end

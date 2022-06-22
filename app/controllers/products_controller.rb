@@ -10,5 +10,4 @@ class ProductsController < ApplicationController
     pID = params[:productId].to_i
     session[:cart] << pID unless session[:cart].include?(pID)
   end
-
 end

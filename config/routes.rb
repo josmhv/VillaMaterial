@@ -10,5 +10,4 @@ Rails.application.routes.draw do
 
   get "home/contacts"
   root "home#index"
-
 end

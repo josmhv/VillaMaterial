@@ -1,8 +1,8 @@
 <h2>Carrito</h2>
 <% if user_signed_in? %>
   <% @cart.each do |product| %>
-    <%= product.name%>
+    <%= product.name %>
     <%= product.id %>
-    <%= button_to "Delete", carts_remove_from_cart_path(:id => product.id), method: :delete, class:"btn btn-danger" %>
-  <%end%>
+    <%= button_to "Delete", carts_remove_from_cart_path(:id => product.id), method: :delete, class: "btn btn-danger" %>
+  <% end %>
 <% end %>
