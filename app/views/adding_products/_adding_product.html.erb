@@ -1,17 +1,19 @@
 <div id="<%= dom_id adding_product %>">
-  <p>
-    <strong>Name:</strong>
-    <%= adding_product.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= adding_product.description %>
-  </p>
-
-  <p>
-    <strong>Image:</strong>
-    <%= adding_product.image %>
-  </p>
-
+  <div class="card border-dark bg-light mb-3" style="max-width: 40rem;">
+    <div class="card-header">Producto</div>
+    <div class="card-body">
+      <h5 class="card-title display-4"><%= adding_product.name %></h5>
+      <p class="card-text">
+      - Descripción: <%= adding_product.description %></br>
+      - Precio: <%= adding_product.price %></br>
+      - Unidad: <%= adding_product.unit %></br>
+      - Cantidad Mínima: <%= adding_product.qnt %></br>
+      - Imagen: <%= adding_product.image %></br>
+      </p>
+    <div>
+      <%= link_to "Editar", edit_adding_product_path(@adding_product), class: "btn btn-primary" %>
+      <%= link_to "Borrar", @adding_product, class: "btn btn-danger", method: :delete %>
+    </div>
+    </div>
+  </div>
 </div>

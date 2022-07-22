@@ -2,13 +2,38 @@
 
 <h1>Adding products</h1>
 
-<div id="adding_products">
-  <% @adding_products.each do |adding_product| %>
-    <%= render adding_product %>
-    <p>
-      <%= link_to "Show this adding product", adding_product %>
-    </p>
-  <% end %>
-</div>
+<table class="table table-hover table-bordered ">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Unidad</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Cantidad Min</th>
+      <th scope="col">Imagen</th>
+      <th scope="col">Mostrar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
 
-<%= link_to "Añadir producto", new_adding_product_path %>
+    <div id="adding_products">
+      <% @adding_products.each do |product| %>
+        <tr>
+          <th scope='row'><%= product.id %></th>
+          <td><%= product.name %></td>
+          <td><%= product.description %></td>
+          <td><%= product.unit %></td>
+          <td><%= product.price %></td>
+          <td><%= product.qnt %></td>
+          <td><%= product.image %></td>
+          <td><%= link_to "Mostrar producto", product, class: "btn btn-primary btn-block" %></td>
+          <td><%= button_to "Eliminar producto", product, method: :delete, class: "btn btn-danger btn-block" %></td>
+        </tr>
+      <% end %>
+    </div>
+  </tbody>
+</table>
+
+<%= link_to "Añadir producto", new_adding_product_path, class: "btn btn-secondary" %>

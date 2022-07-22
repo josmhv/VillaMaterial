@@ -2,7 +2,6 @@
   <% if adding_product.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(adding_product.errors.count, "error") %> prohibited this adding_product from being saved:</h2>
-
       <ul>
         <% adding_product.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -10,23 +9,30 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.label :image, style: "display: block" %>
-    <%= form.text_field :image %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+  <form>
+    <div class="form-group">
+      <%= form.label :name, for: "exampleInputEmail1" %>
+      <%= form.text_field :name, class: "form-control", id: "exampleInputEmail1", aria_describedby: "emailHelp" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :description, for: "exampleInputPassword1" %>
+      <%= form.text_area :description, class: "form-control", id: "exampleInputPassword1" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :unit, for: "exampleInputEmail1" %>
+      <%= form.text_field :unit, class: "form-control", id: "exampleInputEmail1", aria_describedby: "emailHelp" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :price, for: "exampleInputEmail1" %>
+      <%= form.text_field :price, class: "form-control", id: "exampleInputEmail1", aria_describedby: "emailHelp" %>
+    <div class="form-group">
+      <%= form.label :qnt, for: "exampleInputEmail1" %>
+      <%= form.text_field :qnt, class: "form-control", id: "exampleInputEmail1", aria_describedby: "emailHelp" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :image, for: "exampleInputEmail1" %>
+      <%= form.text_field :image, class: "form-control", id: "exampleInputEmail1", aria_describedby: "emailHelp" %>
+    </div>
+    <%= form.submit "Submit", class: "btn btn-primary" %>
+  </form>
 <% end %>

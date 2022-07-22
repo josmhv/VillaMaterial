@@ -1,0 +1,64 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	C:/Users/josem/Documents/Programacion/Projects HTML/Tienda/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/80ee839/
+AddImageToAddProducts	db/migrate/20220520141848_add_image_to_add_products.rb	/^class AddImageToAddProducts < ActiveRecord::Migration[7.0]$/;"	c
+AddingProduct	app/models/adding_product.rb	/^class AddingProduct < ApplicationRecord$/;"	c
+AddingProductTest	test/models/adding_product_test.rb	/^class AddingProductTest < ActiveSupport::TestCase$/;"	c
+AddingProductsController	app/controllers/adding_products_controller.rb	/^class AddingProductsController < ApplicationController$/;"	c
+AddingProductsControllerTest	test/controllers/adding_products_controller_test.rb	/^class AddingProductsControllerTest < ActionDispatch::IntegrationTest$/;"	c
+AddingProductsHelper	app/helpers/adding_products_helper.rb	/^module AddingProductsHelper$/;"	m
+AddingProductsTest	test/system/adding_products_test.rb	/^class AddingProductsTest < ApplicationSystemTestCase$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	module:Tienda
+ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
+ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::Base$/;"	c
+ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
+ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
+ApplicationSystemTestCase	test/application_system_test_case.rb	/^class ApplicationSystemTestCase < ActionDispatch::SystemTestCase$/;"	c
+CartsController	app/controllers/carts_controller.rb	/^class CartsController < ApplicationController$/;"	c
+CartsControllerTest	test/controllers/carts_controller_test.rb	/^class CartsControllerTest < ActionDispatch::IntegrationTest$/;"	c
+CartsHelper	app/helpers/carts_helper.rb	/^module CartsHelper$/;"	m
+Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	module:ApplicationCable
+Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	module:ApplicationCable
+ConnectionTest	test/channels/application_cable/connection_test.rb	/^class ApplicationCable::ConnectionTest < ActionCable::Connection::TestCase$/;"	c	module:ApplicationCable
+CreateAddingProducts	db/migrate/20220520145239_create_adding_products.rb	/^class CreateAddingProducts < ActiveRecord::Migration[7.0]$/;"	c
+DeviseCreateUsers	db/migrate/20220526152522_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration[7.0]$/;"	c
+HomeController	app/controllers/home_controller.rb	/^class HomeController < ApplicationController$/;"	c
+HomeControllerTest	test/controllers/home_controller_test.rb	/^class HomeControllerTest < ActionDispatch::IntegrationTest$/;"	c
+HomeHelper	app/helpers/home_helper.rb	/^module HomeHelper$/;"	m
+ProductsController	app/controllers/products_controller.rb	/^class ProductsController < ApplicationController$/;"	c
+ProductsControllerTest	test/controllers/products_controller_test.rb	/^class ProductsControllerTest < ActionDispatch::IntegrationTest$/;"	c
+ProductsHelper	app/helpers/products_helper.rb	/^module ProductsHelper$/;"	m
+TestCase	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c	module:ActiveSupport
+Tienda	config/application.rb	/^module Tienda$/;"	m
+User	app/models/user.rb	/^class User < ApplicationRecord$/;"	c
+UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
+addToCart	app/controllers/products_controller.rb	/^  def addToCart$/;"	f	class:ProductsController
+adding_product_params	app/controllers/adding_products_controller.rb	/^  def adding_product_params$/;"	f	class:AddingProductsController
+change	db/migrate/20220520141848_add_image_to_add_products.rb	/^  def change$/;"	f	class:AddImageToAddProducts
+change	db/migrate/20220520145239_create_adding_products.rb	/^  def change$/;"	f	class:CreateAddingProducts
+change	db/migrate/20220526152522_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+create	app/controllers/adding_products_controller.rb	/^  def create$/;"	f	class:AddingProductsController
+create_cart	app/controllers/application_controller.rb	/^  def create_cart$/;"	f	class:ApplicationController
+destroy	app/controllers/adding_products_controller.rb	/^  def destroy$/;"	f	class:AddingProductsController
+edit	app/controllers/adding_products_controller.rb	/^  def edit$/;"	f	class:AddingProductsController
+index	app/controllers/adding_products_controller.rb	/^  def index$/;"	f	class:AddingProductsController
+index	app/controllers/home_controller.rb	/^  def index$/;"	f	class:HomeController
+initialize_session	app/controllers/application_controller.rb	/^  def initialize_session$/;"	f	class:ApplicationController
+new	app/controllers/adding_products_controller.rb	/^  def new$/;"	f	class:AddingProductsController
+products	app/controllers/products_controller.rb	/^  def products$/;"	f	class:ProductsController
+remove_from_cart	app/controllers/carts_controller.rb	/^  def remove_from_cart$/;"	f	class:CartsController
+set_adding_product	app/controllers/adding_products_controller.rb	/^  def set_adding_product$/;"	f	class:AddingProductsController
+show	app/controllers/adding_products_controller.rb	/^  def show$/;"	f	class:AddingProductsController
+show	app/controllers/carts_controller.rb	/^  def show$/;"	f	class:CartsController
+update	app/controllers/adding_products_controller.rb	/^  def update$/;"	f	class:AddingProductsController

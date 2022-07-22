@@ -1,0 +1,56 @@
+<div>
+  <div class="container" style="padding-top: 50px; margin-bottom: 20px;">
+    <table class="table ">
+      <thead>
+        <th scope="col">Producto</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Precio</th>
+        <th scope="price">Precio final</th>
+      </thead>
+      <tbody>
+        <% @cart.each do |product| %>
+          <tr>
+            <td class="col-md-5"><%= product.name %></td>
+            <td><%= @pqnt = @session_cart[product.id.to_s] %> <%= product.unit %></td>
+            <td><%= product.price %>$ * <%= product.unit %></td>
+            <td scope="price" class='money'><%= @ind_total_price.push(@pqnt * product.price).last %>$</td>
+          </tr>
+        <% end %>
+        <tr>
+          <th>SUB TOTAL</th>
+          <td></td>
+          <td></td>
+          <th class="money"><%= @sub_total = @ind_total_price.sum %>$</th>
+        </tr>
+        <tr>
+          <th>IVA</th>
+          <th colspan='2' class="money imp">16%</th>
+          <th class="money"><%=
+          @iva = (@sub_total * 0.16).ceil(2)
+          %>$</th>
+        </tr>
+        <tr>
+          <th>Impuesto</th>
+          <th colspan='2' class='money imp'>0%</th>
+          <th class='money'><%=
+            @Impuesto = (@sub_total * 0).ceil(2)
+            %>$</th>
+        </tr>
+        <tr>
+          <th>TOTAL</th>
+          <td></td>
+          <td></td>
+          <th scope="price" class='money'>
+            <%= @total = @sub_total + @iva + @Impuesto%>$
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class='mx-auto' style="width: 200px;">
+    <%= button_to "Realizar compra", orders_generate_order_path, class: "btn btn-primary btn-lg" %>
+  </div>
+  <div class="float-right">
+    <%= link_to "Volver al carrito", carts_show_path, class: "btn btn-secondary" %>
+  </div>
+</div>

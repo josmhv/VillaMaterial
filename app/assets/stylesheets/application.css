@@ -3,9 +3,10 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    /* color: rgb(255, 215, 163); */
-    /* background-color: rgb(117, 4, 0) ; */
+    color: #1b1d52;
+    /* background-color: #DDD; */
 }
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

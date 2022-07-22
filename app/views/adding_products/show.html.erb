@@ -1,10 +1,9 @@
+<div class="container">
 <p style="color: green"><%= notice %></p>
 
 <%= render @adding_product %>
 
-<div>
-  <%= link_to "Edit this adding product", edit_adding_product_path(@adding_product) %> |
-  <%= link_to "Back to adding products", adding_products_path %>
+  <% # link_to "Edit this adding product", edit_adding_product_path(@adding_product) %> 
+  <%= link_to "Volver", adding_products_path, class: "btn btn-secondary" %>
 
-  <%= button_to "Destroy this adding product", @adding_product, method: :delete %>
 </div>

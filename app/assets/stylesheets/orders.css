@@ -1,0 +1,6 @@
+.money {
+  text-align: right;
+}
+.money.imp {
+  text-align: center;
+}

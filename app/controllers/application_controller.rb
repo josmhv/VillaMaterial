@@ -4,19 +4,21 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
   before_action :initialize_session
-  before_action :create_cart
 
   private
 
   def initialize_session
     if user_signed_in?
-      session[:cart] ||= []
+      session[:cart] ||= Hash.new
+      @cart = AddingProduct.find(session[:cart].keys)
+      @session_cart = session[:cart]
     end
   end
+end
 
-  def create_cart
-    if user_signed_in?
-      @cart = AddingProduct.find(session[:cart])
-    end
+class HomeController < ApplicationController
+  skip_before_action :authenticate_user!
+
+  def index 
   end
 end
