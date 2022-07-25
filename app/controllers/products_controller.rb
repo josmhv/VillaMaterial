@@ -1,9 +1,10 @@
 class ProductsController < ApplicationController
-  before_action :set_add_product, only: %i[show]
+  # before_action :set_add_product, only: %i[show]
   protect_from_forgery with: :null_session
 
   def products
     @adding_products = AddingProduct.search(params[:query])
+    # @productos = AddingProduct.all
     # searche = params[:query]
     # if searche
     #   @adding_products = AddingProduct.all.select { |product|

@@ -41,3 +41,4 @@ gem "devise", "~> 4.8", ">= 4.8.1"
 gem "sassc-rails"
 gem "rubocop", require: false
 gem "jquery-rails"
+gem 'figaro'
