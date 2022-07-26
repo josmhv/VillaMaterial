@@ -1,5 +1,6 @@
 class AddingProductsController < ApplicationController
   before_action :set_adding_product, only: %i[ show edit update destroy ]
+  before_action :authenticate
 
   # GET /adding_products or /adding_products.json
   def index
@@ -67,5 +68,9 @@ class AddingProductsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def adding_product_params
     params.require(:adding_product).permit(:name, :description, :image, :price, :unit, :qnt)
+  end
+
+  def authenticate
+    redirect_to root_path, status: :forbidden unless current_user.admin?
   end
 end
