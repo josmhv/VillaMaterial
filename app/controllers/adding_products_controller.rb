@@ -51,6 +51,7 @@ class AddingProductsController < ApplicationController
   # DELETE /adding_products/1 or /adding_products/1.json
   def destroy
     @adding_product.destroy
+    session[:cart] = Hash.new
 
     respond_to do |format|
       format.html { redirect_to adding_products_url, notice: "Adding product was successfully destroyed." }
