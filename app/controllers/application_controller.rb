@@ -17,14 +17,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def authenticate_admin
-    
-  end
-
   def create_admins 
     if current_user.email === ENV['GMAIL_ADMIN']
       current_user.update_attribute :admin, true
-      p "You are admin! #{current_user.email}"
     end
   end
 end

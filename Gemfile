@@ -38,6 +38,9 @@ end
 
 gem "wdm", ">= 0.1.0" if Gem.win_platform?
 gem "devise", "~> 4.8", ">= 4.8.1"
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection', '~> 1.0', '>= 1.0.1'
 gem "sassc-rails"
 gem "rubocop", require: false
 gem "jquery-rails"
