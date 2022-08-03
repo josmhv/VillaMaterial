@@ -18,5 +18,7 @@ class CartsController < ApplicationController
   def update
     @id = params[:id].to_i
     @session_cart[@id] = params[:qnt].to_i
+    flash[:notice] = "Cantidad actualizada"
+    redirect_to carts_show_path
   end
 end

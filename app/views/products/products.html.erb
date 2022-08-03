@@ -22,6 +22,7 @@
           <%= button_to "Añadir al carrito", products_addToCart_path(:productId => product.id, :productqnt => product.qnt), class: "btn btn-outline-primary" %>
         </div>
       </div>
+        <% render 'layouts/alerts' %>
     <% end %>
   </div>
 </div>
