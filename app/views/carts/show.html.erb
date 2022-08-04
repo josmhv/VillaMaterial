@@ -1,29 +1,31 @@
-<div class="container " >
-  <h1 class="display-4">Carrito</h1>
+<div class=" cart-responsive" >
+  <h1>Carrito</h1>
   <% if user_signed_in? %>
     <% @cart.each do |product| %>
-      <div class="card mb-3 border-secondary" >
+      <div class="card mb-3 border-secondary card-cart-responsive" >
         <div class="row g-0">
           <div class="col-md-4">
-            <%= image_tag "products/#{product.image}", alt: "Imagen de #{product.name}", class: "img-fluid rounded-start" %>
+            <%= image_tag "products/#{product.image}", alt: "Imagen de #{product.name}", class: "img-fluid rounded-start img-responsive" %>
           </div>
           <div class="col-md-8">
             <div class="card-body">
               <div class="row">
                 <div class="col-10">
                   <h5 class="card-title"><%= product.name %></h5>
-                  <p class="card-text">
+                  <div class="card-text card-text-responsive">
                     <%= product.description %>
                     <br><br>
                     Cuesta <%= product.price %>$ por <%= product.unit %>
-                  <br>
-                  <%= form_with url: carts_update_path do |form| %>
-                    <%= form.hidden_field :id, value: "#{product.id}" %>
-                    Cuantos <%= product.unit %> desea? <%= form.number_field :qnt, in: product.qnt..100.0, step: 1, value: "#{@session_cart[product.id.to_s].to_i}" %> <%= form.submit ">", class: "btn btn-success" %>
-                <% end %>
-                  </p>
+                  <br><br>
+                  <div>
+                    <%= form_with url: carts_update_path do |form| %>
+                      <%= form.hidden_field :id, value: "#{product.id}" %>
+                      Cuantos <%= product.unit %> desea? <%= form.number_field :qnt, in: product.qnt..100.0, step: 1, value: "#{@session_cart[product.id.to_s].to_i}" %> <%= form.submit ">", class: "btn btn-success" %>
+                    <% end %>
+                  </div>
+                  </div>
                 </div>
-                <div class="col">
+                <div class="col " style="width: 10%">
                   <%= button_to "X", carts_remove_from_cart_path(:id => product.id), method: :delete, class: "btn btn-danger float-right" %>
                 </div>
               </div>

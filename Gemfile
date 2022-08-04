@@ -45,3 +45,4 @@ gem "sassc-rails"
 gem "rubocop", require: false
 gem "jquery-rails"
 gem 'figaro'
+gem 'rspec-rails'

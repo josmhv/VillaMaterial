@@ -4,15 +4,6 @@ class ProductsController < ApplicationController
 
   def products
     @adding_products = AddingProduct.search(params[:query])
-    # @productos = AddingProduct.all
-    # searche = params[:query]
-    # if searche
-    #   @adding_products = AddingProduct.all.select { |product|
-    #     product.name.include?(searche)
-    #   }
-    # else
-    #   @adding_products = AddingProduct.all
-    # end
   end
 
   def addToCart

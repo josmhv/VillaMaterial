@@ -1,4 +1,4 @@
-<h1 class="display-4">Productos</h1>
+<h1>Productos</h1>
 <div>
   <div>
     <%= form_with url: products_products_path, method: :get do |form| %>
@@ -12,11 +12,11 @@
   </div>
   <div id="adding_products" class="row" style='margin: 0px 0px -20px -20px;'>
     <% @adding_products.each do |product| %>
-      <div class="card col-sm6" style="width: 17.85rem; margin-left: 20px; margin-bottom: 20px">
+      <div class="card col-sm6 product-responsive" style="width: 17.85rem; margin-left: 20px; margin-bottom: 20px">
         <%= image_tag "products/#{product.image}", alt: "image of #{product.name}", class: "card-img-top" %>
         <div class="card-body">
           <h1 class="card-title display-5"> <%= product.name %> </h5>
-          <p class="card-text"> <%= product.description %> </p>
+          <p class="card-text card-text-responsive"> <%= product.description %> </p>
         </div>
         <div class="card-body">
           <%= button_to "Añadir al carrito", products_addToCart_path(:productId => product.id, :productqnt => product.qnt), class: "btn btn-outline-primary" %>

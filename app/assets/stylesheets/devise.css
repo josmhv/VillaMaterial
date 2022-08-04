@@ -1,0 +1,11 @@
+.card-responsive {
+    margin: auto;
+    width: 50%;
+}
+
+@media screen and (max-width: 800px) {
+  .card-responsive {
+    margin: auto;
+    width: 100%;
+  }
+}

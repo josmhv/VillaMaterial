@@ -4,11 +4,22 @@
 body {
   font-family: 'Varela Round';
   color: black;
-  /* background-color: black; */
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Vollkorn', serif;
 }
+h1 {
+    font-size: 4.5rem;
+}
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+  body {
+      font-size: 15px;
+  }
+}
+
 .btn {
     font-family: 'Varela Round'
 }
@@ -20,6 +31,12 @@ h1, h2, h3, h4, h5, h6 {
     text-align: justify;
     font-size: 20px;
 }
+@media only screen and (max-width: 600px) {
+  /* .product-responsive img{ */
+  /*   width:50%; */
+  /* } */
+}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

@@ -1,4 +1,0 @@
-- Agregar al modelo de adding_products:
-  + Precio (price:int)
-  + Unidad de medida (unity:int)
-- Generar orden de compra
