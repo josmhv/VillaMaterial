@@ -36,6 +36,12 @@ h1 {
   /*   width:50%; */
   /* } */
 }
+.card .btn-hover{
+  transition: transform .2s;
+}
+.card .btn-hover:hover {
+  transform: scale(1.1);
+}
 
 
 /*

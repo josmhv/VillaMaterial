@@ -15,7 +15,11 @@ Rails.application.routes.draw do
 
   get "orders/index"
   post "orders/generate_order"
+  get 'orders/info'
+  post 'orders/info'
+  post 'orders/submit_info'
   get 'orders/buy'
+  post 'orders/buy'
 
   get "home/contacts"
   root "home#index"

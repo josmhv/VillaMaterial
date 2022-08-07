@@ -42,7 +42,7 @@
           <td></td>
           <th scope="price" class='money'>
             <%= @total = @sub_total + @iva + @Impuesto
-              session[:total] = @total
+              session[:cart][:total] = @total
             %>$
           </th>
         </tr>
@@ -50,7 +50,7 @@
     </table>
   </div>
   <div class='mx-auto' style="width: 200px;">
-    <%= link_to "Realizar compra", orders_buy_path, class: "btn btn-primary btn-lg" %>
+    <%= link_to "Realizar compra", orders_info_path, class: "btn btn-primary btn-lg" %>
   </div>
   <div class="float-right">
     <%= link_to "Volver al carrito", carts_show_path, class: "btn btn-secondary" %>

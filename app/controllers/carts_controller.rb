@@ -12,7 +12,7 @@ class CartsController < ApplicationController
   def remove_from_cart
     id = params[:id]
     @session_cart.delete(id)
-    redirect_to carts_show_path
+    redirect_to request.referer 
   end
 
   def update

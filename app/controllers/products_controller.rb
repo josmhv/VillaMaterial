@@ -9,13 +9,10 @@ class ProductsController < ApplicationController
   def addToCart
     @pID = params[:productId].to_i
     pQNT = params[:productqnt].to_i
-    unless session[:cart].include?(@pID)
+    unless session[:cart].include?(@pID.to_s)
       session[:cart][@pID] = pQNT
       flash[:notice] = "Producto agregado al carrito"
       flash[:notice_cart] = true
-      redirect_to products_products_path
-    else
-      flash[:notice] = "Producto ya existe en el carrito"
       redirect_to products_products_path
     end
   end
