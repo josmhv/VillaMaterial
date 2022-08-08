@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def initialize_session
     if user_signed_in?
-      session[:cart] ||= Hash.new
+      session[:cart] = Hash.new
       @cart = AddingProduct.find(session[:cart].keys)
       @session_cart = session[:cart]
 
