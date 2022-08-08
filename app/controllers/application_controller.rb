@@ -17,11 +17,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+
   def create_admins 
     if current_user.email === ENV['GMAIL_ADMIN']
       current_user.update_attribute :admin, true
     end
   end
+  
 end
 
 class HomeController < ApplicationController

@@ -42,7 +42,7 @@
           <td></td>
           <th scope="price" class='money'>
             <%= @total = @sub_total + @iva + @Impuesto
-              session[:cart][:total] = @total
+              session[:total] = @total
             %>$
           </th>
         </tr>

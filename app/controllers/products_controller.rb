@@ -7,10 +7,12 @@ class ProductsController < ApplicationController
   end
 
   def addToCart
-    @pID = params[:productId].to_i
+    pID = params[:productId].to_i
     pQNT = params[:productqnt].to_i
-    unless session[:cart].include?(@pID.to_s)
-      session[:cart][@pID] = pQNT
+    unless session[:cart].include?(pID.to_s)
+      session[:cart][pID] = pQNT
+
+      # Frontend Futuro Svelte
       flash[:notice] = "Producto agregado al carrito"
       flash[:notice_cart] = true
       redirect_to products_products_path

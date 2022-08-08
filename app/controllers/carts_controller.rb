@@ -1,12 +1,11 @@
 class CartsController < ApplicationController
-  # before_action :initializer
-
-  # def initializer
-  #   @session_cart = session[:cart]
-  # end
-
   def show
     @products = AddingProduct.all
+  end
+  
+  def delete_cart
+    session[:cart] = Hash.new
+    redirect_to request.referer
   end
 
   def remove_from_cart

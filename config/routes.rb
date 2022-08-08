@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post "carts/show"
   post "carts/update"
   delete "carts/remove_from_cart"
+  post 'carts/delete_cart'
 
   resources :adding_products
   get "products/products"
