@@ -9,9 +9,16 @@ class ApplicationController < ActionController::Base
 
   def initialize_session
     if user_signed_in?
-      session[:cart] ||= Hash.new
-      @cart = AddingProduct.find(session[:cart].keys)
-      @session_cart = session[:cart]
+      begin
+        session[:cart] ||= Hash.new
+        @cart = AddingProduct.find(session[:cart].keys)
+        @session_cart = session[:cart]
+      rescue
+        session[:cart] = Hash.new
+        @cart = AddingProduct.find(session[:cart].keys)
+        @session_cart = session[:cart]
+        p "session cart is empty caused by error"
+      end
 
       create_admins
     end
@@ -23,12 +30,17 @@ class ApplicationController < ActionController::Base
       current_user.update_attribute :admin, true
     end
   end
-  
 end
 
-class HomeController < ApplicationController
-  skip_before_action :authenticate_user!
+# class HomeController < ApplicationController
+#   skip_before_action :authenticate_user!
 
-  def index 
-  end
-end
+#   def index 
+#   end
+# end
+# class ProductsController < ApplicationController
+#   skip_before_action :authenticate_user!
+
+#   def produtcs 
+#   end
+# end

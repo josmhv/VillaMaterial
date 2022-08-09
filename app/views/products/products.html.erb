@@ -1,18 +1,19 @@
 <h1>Productos</h1>
 <div>
-  <div>
+  <div >
     <%= form_with url: products_products_path, method: :get do |form| %>
-      <div class="input-group mb-3">
+      <div class="input-group mb-3" >
         <%= form.search_field :query, placeholder: "Nombre del producto...", class: "form-control", autofocus: true, id: 'products-search-bar'  %>
         <div class="input-group-append">
-          <%= form.submit "Buscar", class: "btn btn-primary"%>
+          <%= button_to raw("<i class=\"bi bi-search\"></i>".html_safe), products_products_path, class:'btn btn-primary btn-info' %>
         </div>
       </div>
     <% end %>
   </div>
- <div id="adding_products" class="row" style='margin: 0px 0px -20px -20px;'>
+  <%# 0px 0px -20px -20px %>
+ <div id="adding_products" class="row mx-auto" style="width: 100%">
     <% @adding_products.each do |product| %>
-      <div class="card col-sm6 product-responsive" style="width: 17.85rem; margin-left: 20px; margin-bottom: 20px">
+      <div class="card product-responsive" style="width: 17.5rem; margin-right: 20px; margin-bottom: 20px; font-size: 17px">
         <%= image_tag "products/#{product.image}", alt: "image of #{product.name}", class: "card-img-top" %>
         <div class="card-body">
           <h1 class="card-title display-5"> <%= product.name %> </h5>
@@ -23,7 +24,7 @@
         </div>
         <% unless session[:cart].include?(product.id.to_s) %>
           <div class="card-body">
-            <%= button_to "Añadir al carrito", products_addToCart_path(:productId => product.id, :productqnt => product.qnt), class: "btn btn-primary btn-hover" %>
+            <%= button_to "Añadir al carrito", products_addToCart_path(:productId => product.id, :productqnt => product.qnt), class: "btn btn-primary btn-hover " %>
           </div>
         <% else %>
           <div class="card-body">
