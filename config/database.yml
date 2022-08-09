@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: villa-material
+  database: postgres
   username: VillaMaterial
   password: <%= ENV["VILLAMATERIAL_DATABASE_PASSWORD"] %>
