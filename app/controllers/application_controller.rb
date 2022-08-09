@@ -10,14 +10,14 @@ class ApplicationController < ActionController::Base
   def initialize_session
     if user_signed_in?
       begin
-        session[:cart] ||= Hash.new
+        session[:cart] = Hash.new
         @cart = AddingProduct.find(session[:cart].keys)
         @session_cart = session[:cart]
       rescue
         session[:cart] = Hash.new
-        @cart = AddingProduct.find(session[:cart].keys)
-        @session_cart = session[:cart]
-        p "session cart is empty caused by error"
+        # @cart = AddingProduct.find(session[:cart].keys)
+        # @session_cart = session[:cart]
+        # p "session cart is empty caused by error"
       end
 
       create_admins
