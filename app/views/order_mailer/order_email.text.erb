@@ -1,0 +1,26 @@
+<% 
+  require 'json'
+  @adding_products = AddingProduct.all 
+  # Cambiar last por algo mas seguro
+  @order = Order.last
+%>
+Nuevo pedido de <%= @order.user %>
+
+Productos: 
+<% 
+  products = JSON.parse(@order.products)
+  products.each do |key, value| 
+%>
+  - <%= @adding_products.find(key.to_i).name %>: <%= value %>
+<% end %>
+
+Monto sin envío:
+ - <%= @order.paid %>
+
+Información personal:
+<% @order.info.each do |info| %>
+  - <%= info %>
+<% end %>
+
+Fecha: 
+  - <%= @order.created_at %>

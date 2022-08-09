@@ -88,6 +88,8 @@ GEM
     childprocess (4.1.0)
     coderay (1.1.3)
     concurrent-ruby (1.1.10)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     debug (1.4.0)
       irb (>= 1.3.6)
@@ -167,6 +169,7 @@ GEM
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
+    mime (0.4.4)
     mini_mime (1.1.2)
     minitest (5.15.0)
     msgpack (1.5.1)
@@ -353,6 +356,7 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
+    url_safe_base64 (0.2.2)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -381,6 +385,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
+  crack
   debug
   devise (~> 4.8, >= 4.8.1)
   figaro
@@ -388,6 +393,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   jquery-rails
+  mime
   omniauth
   omniauth-google-oauth2
   omniauth-rails_csrf_protection (~> 1.0, >= 1.0.1)
@@ -404,6 +410,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
+  url_safe_base64
   web-console
   webdrivers
 

@@ -47,3 +47,6 @@ gem "rubocop", require: false
 gem "jquery-rails"
 gem 'figaro'
 gem 'rspec-rails'
+gem 'url_safe_base64'
+gem 'mime'
+gem 'crack'
