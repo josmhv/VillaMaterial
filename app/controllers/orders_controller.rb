@@ -24,7 +24,6 @@ class OrdersController < ApplicationController
     if @order.save
       session[:cart] = Hash.new
       session[:total] = 0
-      redirect_to orders_buy_path
     else
       redirect_to orders_info_path
     end
