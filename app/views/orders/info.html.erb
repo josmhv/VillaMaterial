@@ -5,30 +5,30 @@
 
   <div class="border" style="margin-bottom: 15px; padding: 30px">
     <%= form_with url: '/orders/submit_info' do |form| %>
-      <div class="form-row">
-        <div class="col-md-6 mb-3">
+      <div class="form-row has-validation">
+        <div class="col-md-6 mb-3 ">
           <%= form.label :name, 'Nombre o razón social'%>
-          <%= form.text_field :name, class: 'form-control' %>
+          <%= form.text_field :name, class: 'form-control', required: true%>
         </div>
-        <div class="col-md-6 mb-3">
+        <div class="col-md-6 mb-3 ">
           <%= form.label :ciorif, 'Cédula o RIF' %>
-          <%= form.number_field :ciorif, class: 'form-control' %>
+          <%= form.text_field :ciorif, class: 'form-control', required: true %>
         </div>
       </div>
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <%= form.label :email, 'Correo electrónico'%>
-          <%= form.email_field :email, class: 'form-control' %>
+          <%= form.email_field :email, class: 'form-control', required: true %>
         </div>
         <div class="col-md-6 mb-3">
           <%= form.label :tlf, 'Télefono'%>
-          <%= form.phone_field :tlf, class: 'form-control' %>
+          <%= form.phone_field :tlf, class: 'form-control', required: true %>
         </div>
       </div>
       <div class="form-row">
         <div class="col-md mb-3">
           <%= form.label :address, 'Dirección'%>
-          <%= form.text_field :address, class: 'form-control' %>
+          <%= form.text_field :address, class: 'form-control', required: true %>
         </div>
       </div>
       <%= form.submit 'Pago', class:'btn btn-success' %>
