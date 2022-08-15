@@ -10,12 +10,13 @@ Productos:
 <% 
   products = JSON.parse(@order.products)
   products.each do |key, value| 
+    p = @adding_products.find(key.to_i)
 %>
-  - <%= @adding_products.find(key.to_i).name %>: <%= value %>
+  - <%= p.name %>: <%= value %><%= p.unit%>
 <% end %>
 
 Monto sin envío:
- - <%= @order.paid %>
+ - <%= @order.paid %>$
 
 Información personal:
 <% @order.info.each do |info| %>
